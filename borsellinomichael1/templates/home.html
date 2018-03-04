@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<title>Michael Borsellino</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon1.png') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/icons.css') }}">
+
+<style>
+
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+	
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url("{{ url_for('static', filename='img/watkinsglen.jpg') }}");
+    min-height: 100%;
+}
+
+/* Second image (Research) */
+.bgimg-2 {
+    background-image: url("{{ url_for('static', filename='img/library.jpg') }}");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("{{ url_for('static', filename='img/roses.jpg') }}");
+    min-height: 400px;
+}
+
+.wide {letter-spacing: 10px;}
+.hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="top">
+  <div class="bar" id="myNavbar">
+    <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="bar-item button text-white">HOME</a>
+    <a href="#about" class="bar-item button hide-small text-white"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#research" class="bar-item button hide-small text-white"><i class="fa fa-th"></i> RESEARCH</a>
+    <a href="#contact" class="bar-item button hide-small text-white"><i class="fa fa-envelope"></i> CONTACT</a>
+	<a href="https://twitter.com/mborsel" class="bar-item button hide-small text-white"><i class="fa fa-book"></i> LINKS</a>
+    <!--<a href="#" class="bar-item button hide-small right hover-red">
+      <i class="fa fa-search"></i>-->
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="bar-block white hide hide-large hide-medium">
+    <a href="#about" class="bar-item button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#research" class="bar-item button" onclick="toggleFunction()">RESEARCH</a>
+    <a href="#contact" class="bar-item button" onclick="toggleFunction()">CONTACT</a>
+    <!-- <a href="#" class="bar-item button">SEARCH</a> -->
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 display-container opacity-min" id="home">
+  <div class="display-middle" style="white-space:nowrap;">
+    <span class="center padding-large black xlarge wide animate-opacity">MICHAEL BORSELLINO <span class="hide-small"></span></span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="content container padding-64" id="about">
+  <h3 class="center">ABOUT ME</h3>
+  <p class="center"><em>Urban Planning Student</em></p>
+  <p>Michael Borsellino is currently pursuing his doctorate in urban planning at the University of Michigan – Ann Arbor.  He is passionate about affordable housing and community growth.  Using an urban theory framework, his dissertation will explore these topics through a critique of supply-side housing economics.  He is also interested in public financing of stadiums and large events.  Michael defected to UM from Big Ten rival Rutgers University where he earned degrees in City & Regional Planning (MCRP, 2017) and Geography (BA, 2015).  While at Rutgers, Michael actively engaged with local community children as a community mentor with the Pilot Me program.</p>
+
+  <div class="row">
+    <div class="col m6 center padding-large">
+      <br>
+      <img src="{{ url_for('static', filename='img/personal.png') }}" class="round image opacity hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="col m6 hide-small padding-large">
+      <p>Michael is an avid runner and he also enjoys gardening and cooking.  He has recently been learning how to program in python and HTML – this site is one of his ongoing projects.  When he is too tired to do those things, he reads.  Recently, he has been interested in constitutional case law, conflict in the Middle East, political economic theory, and dystopian fiction.  You can follow along with some of what he has been reading by checking out his Twitter. </p>
+    </div>
+	<div class="xlarge center padding-large">
+    	<a href="https://www.linkedin.com/in/mborsel1" title="LinkedIn"><i class="fa fa-linkedin hover-text-indigo"></i></a>
+        <a href="{{ url_for('static', filename='docs/Borsellino.CV.pdf') }}" title="Curricula Vitae"><i class="fa fa-file-pdf-o hover-text-indigo"></i></a>
+        <a href="https://github.com/mborsel1" title="GitHub"><i class="fa fa-github hover-text-indigo"></i></a>
+		<a href="https://twitter.com/mborsel" title="Twitter"><i class="fa fa-twitter hover-text-indigo"></i></a>
+
+  </div>
+  </div>
+  </div>
+</div>
+
+<div class="row center dark-grey padding-16">
+  
+</div>
+
+<!-- Second Parallax Image with Research Text -->
+<div class="bgimg-2 display-container opacity-min">
+  <div class="display-middle">
+    <span class="xxlarge text-light-grey wide">RESEARCH</span>
+  </div>
+</div>
+
+<!-- Container (Research Section) -->
+<div class="content container padding-64" id="research">
+  <h3 class="center">MY WORK</h3>
+  <p> </p>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="row-padding center">
+	<div class="col m3">
+		<a href="{{ url_for('static',filename='docs/2017-12.LIHTC.pdf') }}" title="Low Income Housing Tax Credits and Poverty Concentration"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Low Income Housing Tax Credits and Poverty Concentration</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static',filename='docs/2017-12.HousingVoting.pdf') }}" title="Impacts of Gentrification on Voting: New York County, 2004"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Impacts of Gentrification on Voting: New York County, 2004</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static',filename='docs/2017-12.AssetGap.pdf') }}" title="Examining the Asset Gap in America's Aging Population"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Examining the Asset Gap in America's Aging Population</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static',filename='docs/2017-11.VotingPredict.pdf') }}" title="Classification tree prediction of self-reported voting using the General Social Survey"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Classification tree prediction of self-reported voting using the General Social Survey</a>
+	</div>
+  </div>
+  <br>
+  <div class="row-padding center">
+	<div class="col m3">
+		<a href="{{ url_for('static',filename='docs/2017-11.CivicAwareness.pdf') }}" title="Understanding Civic Awareness and Politial Activism: A Confirmatory Factor Analysis"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Understanding Civic Awareness and Politial Activism: A Confirmatory Factor Analysis</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2017-05.FutureFrontier.pdf') }}" title="The Future of the Frontier"><i class="fa fa-file-pdf-o hover-text-indigo"></i> The Future of the Frontier</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2017-05.SocialJustice.pdf') }}" title="A History of Social Injustice in Rivertowne"><i class="fa fa-file-pdf-o hover-text-indigo"></i> A History of Social Injustice in Rivertowne</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2016-12.BikeShareStudio.pdf') }}" title="Rutgers University Bike Share Health Impact Assessment"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Rutgers University Bike Share Health Impact Assessment</a>
+	</div>
+  </div>
+  <br>
+  <div class="row-padding center">
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2016-12.PPGIS.pdf') }}" title="Public Participatory Geographic Information Systems:  Empowerment and Marginalization"><i class="fa fa-file-pdf-o hover-text-indigo"></i> PPGIS:  Empowerment and Marginalization</a>
+	</div>
+	<div class="col m3">
+		<a href="http://arcg.is/1fDP5I4" title="Collaborative Fisheries Planning for Virginia's Offshore Wind Energy Area"><i class="fa fa-external-link hover-text-indigo"></i> Collaborative Fisheries Planning for Virginia's Offshore Wind Energy Area</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2015-12.WoodbridgeTownship.pdf') }}" title="Urban Redevelopment in Woodbridge Township, New Jersey"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Urban Redevelopment in Woodbridge Township, New Jersey</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2015-12.EconHist.pdf') }}" title="A Concise History of Economic Development:  1940-2015"><i class="fa fa-file-pdf-o hover-text-indigo"></i> A Concise History of Economic Development:  1940-2015</a>
+	</div>
+  </div>
+  <br>
+  <div class="row-padding center">
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2015-12.RutgersCrosswalk.pdf') }}" title="Rutgers University's College Avenue Crosswalk:  An Observational Study"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Rutgers University's College Avenue Crosswalk:  An Observational Study</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2015-11.LaneEconomic.pdf') }}" title="Understanding Economic Conditions:  Lane County, Oregon"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Understanding Economic Conditions:  Lane County, Oregon</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2015-10.LanePop.pdf') }}" title="Population Modeling and Housing Demand Forecasting:  Lane County, Oregon"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Population Modeling and Housing Demand Forecasting:  Lane County, Oregon</a>
+	</div>
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2015-05.Chanterelles.pdf') }}" title="Optimal Locations for Chanterelle Growth:  A GIS Analysis"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Optimal Locations for Chanterelle Growth:  A GIS Analysis</a>
+	</div>
+  </div>
+  <br>
+  <div class="row-padding center">
+	<div class="col m3">
+		<a href="{{ url_for('static', filename='docs/2013-11.MFVietnam.pdf') }}" title="Microfinance in Vietnam"><i class="fa fa-file-pdf-o hover-text-indigo"></i> Microfinance in Vietnam</a>
+	</div>
+  </div>
+
+
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="modal black" onclick="this.style.display='none'">
+  <span class="button large black display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="modal-content animate-zoom center transparent padding-64">
+    <img id="img01" class="image">
+    <p id="caption" class="opacity large"></p>
+  </div>
+</div>
+
+
+
+<!-- Third Parallax Image with Research Text -->
+<div class="bgimg-3 display-container opacity-min">
+  <div class="display-middle">
+     <span class="xxlarge text-light-grey wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="content container padding-64" id="contact">
+  <h3 class="center">WHERE I WORK</h3>
+
+  <div class="row padding-32 section">
+    <div class="col m4 container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="round-large greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="col m8 panel">
+      <div class="large margin-bottom">
+        <i class="fa fa-map-marker fa-fw hover-text-black xlarge margin-right"></i> 2000 Bonisteel Blvd<br>
+        <i class="fa fa-fw hover-text-black xlarge margin-right"></i> Room 2208I <br>
+        <i class="fa fa-fw hover-text-black xlarge margin-right"></i> Ann Arbor, MI 48109-2069 USA<br>
+        <i class="fa fa-envelope fa-fw hover-text-black xlarge margin-right"></i>University: <a href={{ "mailto:mborsel@umich.edu" }} title="University Email"> mborsel (at) umich (dot) edu</a><br>
+        <i class="fa fa-envelope fa-fw hover-text-black xlarge margin-right"></i>Encrypted: <a href={{ "mailto:mborsel@tuta.io" }} title="Encrypted Email"> mborsel (at) tuta (dot) io <a href="{{ url_for('static', filename='docs/publickey.txt') }}" title="Public Key"><i class="fa fa-lock hover-text-indigo"></i></a><br>
+        <i class="fa fa-phone fa-fw hover-text-black xlarge margin-right"></i> six zero nine nine four one four three two six<br>
+	<i class="fa fa-calendar fa-fw hover-text-black xlarge margin-right"></i><a href={{ "https://goo.gl/Sp8rTJ" }} title="Office Hours"> Office Hours </a><br>
+      </div>
+      <p>Best way to reach me is through university email.</p>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="center black padding-64 opacity hover-opacity-off">
+  <a href="#home" class="button"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+  <div class="large section">
+	<i class="fa fa-copyright center"></i> 2017 Michael Borsellino | All Rights Reserved
+
+  </div>
+
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(42.289150, -83.717254);
+  <!--myCenter=new google.maps.LatLng(40.492749, -74.444841);-->
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "bar" + " card-2" + " animate-top" + " dark-grey";
+    } else {
+        navbar.className = navbar.className.replace(" card-2 animate-top dark-grey", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("show") == -1) {
+        x.className += " show";
+    } else {
+        x.className = x.className.replace(" show", "");
+    }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUoxF1C-Saucvj46VXVXPuG9Ty4pFzi50&callback=myMap"></script>
+
+
+</body>
+</html>
